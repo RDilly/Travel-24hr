@@ -1,7 +1,9 @@
 import HTMLgenerators from "./HTMLgen"
 const $ = document.querySelector.bind(document)
 
-const entriesDisplay = () => {
+const DomPrint = {
+
+entriesDisplay: () => {
     fetch("http://localhost:8088/interests")
         .then(response => response.json())
         .then(myParsedinterests => {
@@ -21,4 +23,5 @@ const entriesDisplay = () => {
             }
             )
         }
-export default entriesDisplay
+    }
+export default DomPrint
