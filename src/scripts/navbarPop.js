@@ -1,4 +1,4 @@
-import navbars from "./navbar"
+import navbars from "./navbars"
 const $ = document.querySelector.bind(document)
 
 const navbarGeneralFull = () => {

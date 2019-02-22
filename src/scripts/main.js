@@ -1,5 +1,5 @@
 import entriesDisplay from "./printToDom"
-import navbarGeneralFull from "navbar/navbarPop.js"
+import navbarGeneralFull from "./navbarPop"
 
 navbarGeneralFull()
 entriesDisplay()
