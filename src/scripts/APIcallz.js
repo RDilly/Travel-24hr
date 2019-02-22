@@ -1,5 +1,5 @@
 
-const apiButlerPlaces = {
+const apiButlerTravel = {
     getPlaces: (userId) => {
         return fetch(`http://localhost:8088/Places?_expand=user&userId=${userId}`)
             .then(res => res.json())
@@ -66,4 +66,4 @@ const apiButlerPlaces = {
 
 };
 
-export default apiButlerPlaces
+export default apiButlerTravel
