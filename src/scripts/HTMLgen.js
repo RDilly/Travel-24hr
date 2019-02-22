@@ -24,7 +24,7 @@ const HTMLgenerators = {
         <h1>${interestName}</h1>
             <ul>
                 <li>${placeName}</li>
-                <li>${visa}</li>
+                <li>Will you need a Visa?   -----   ${visa}</li>
                 <li>${description}</li>
             </ul>
             <button id="editEntry">Edit</button>

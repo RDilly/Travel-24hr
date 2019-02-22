@@ -2,26 +2,23 @@ import HTMLgenerators from "./HTMLgen"
 const $ = document.querySelector.bind(document)
 
 const entriesDisplay = () => {
-    return fetch("http://localhost:8088/interests")
+    fetch("http://localhost:8088/interests")
         .then(response => response.json())
-        .then(myParsedInterests => {
-            myParsedInterests.forEach(interest => {
-                const interestName = interest.name
-                const description = interest.description
-                const placeFinder = parseint(interest.placeId)
-                    .then(fetch(`http://localhost:8088/places/${placeFinder}`)
+        .then(myParsedinterests => {
+            myParsedinterests.forEach(interest => {
+                   fetch(`http://localhost:8088/places/${interest.placeId}`)
                         .then(response => response.json())
-                        .then(myParsedPlaces => {
-                            myParsedPlaces.forEach(place => {
+                        .then(place => {
+                                const interestName = interest.name
                                 const placeName = place.name
                                 const visa = place.visa_required
+                                const description = interest.description
 
                                 let entryHTML = HTMLgenerators.entryHTML(interestName, placeName, visa, description)
-                                $("#news_display").innerHTML += entryHTML
+                                $("#display_section").innerHTML += entryHTML
                             })
                         })
-                    )
             }
             )
-        })}
+        }
 export default entriesDisplay

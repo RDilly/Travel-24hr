@@ -1,0 +1,35 @@
+
+.navbar {
+    background-color: #A6808C;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    box-shadow: 2px 2px 20px black;
+    opacity: 0.6;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 60%;
+  }
+  
+  .navbar:hover {
+      opacity: 0.9;
+  }
+    
+    .navbar a {
+      float: left;
+      color: #565264;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    .navbar a:hover {
+      background-color: #CCB7AE;
+      color: #706677;
+    }
+    
+    .navbar a.active {
+      background-color:#565264;
+      color:#CCB7AE;
+    }
